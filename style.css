@@ -4,26 +4,38 @@
 }
 *::before, *::after{box-sizing: border-box;}
 
-body {
-    min-width: 50vw;
-    min-height: 50vh;
-    border: 5px solid red;
+body{
+    height: 100vh;
     background-image: url("./jay.png");
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position-y: center;
     background-size: contain;
-    background-color: #ffe600;
-    position:relative;
 }
+
+main{
+    /*height: 100vh;*/
+    /*border:5px solid black;*/
+    /*background-image: url("./jay.png");*/
+    /*background-repeat: no-repeat;*/
+    /*background-position-y: center;*/
+    /*background-size: contain;*/
+}
+
 
 #canvas{
     /*background-color:black;*/
     /*border:10px solid white;*/
 }
 
-.buttons{
-    border: 1px solid green;
-    position:absolute;
-    left:5px;
-    top: 5px;
+.tools{
+    /*position:absolute;*/
+    /*left:5px;*/
+    /*top: 5px;*/
+}
+
+.content{
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    /*border: 5px solid blue;*/
 }
