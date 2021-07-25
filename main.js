@@ -149,11 +149,13 @@ ctx.lineCap = "round";
  * 头发
  */
 ctx.beginPath();
-ctx.moveTo(125,250);
-ctx.bezierCurveTo(170,32,  600,35, 748,176);
+ctx.moveTo(748,176);
+ctx.bezierCurveTo(600,35,  170,32, 125,250);
 ctx.stroke();
 
-ctx.beginPath();
+/**
+ * 左边的头发
+ */
 ctx.moveTo(125,250);
 ctx.bezierCurveTo(135,265,  145,260, 145,240);
 ctx.bezierCurveTo(155,220,  155,255, 176,230);
@@ -166,7 +168,6 @@ ctx.lineTo(258,183);
 ctx.bezierCurveTo(260,200,  280,220, 290,238);
 ctx.bezierCurveTo(285,230,  280,200, 275,175);
 ctx.lineTo(290,165);
-
 ctx.bezierCurveTo(300,190,  360,260, 388,275);
 ctx.bezierCurveTo(360,260,  330,170, 320,152);
 ctx.lineTo(330,148);
@@ -175,27 +176,43 @@ ctx.bezierCurveTo(380,210,  370,170, 355,150);
 ctx.lineTo(359,149);
 ctx.bezierCurveTo(380,180,  415,220, 428,228);
 ctx.bezierCurveTo(430,210,  420,190, 405,165);
+ctx.stroke();
+
+/**
+ * 中间的头发
+ */
 ctx.lineTo(408,162);
 ctx.bezierCurveTo(436,210,  472,240, 495,250);
 ctx.bezierCurveTo(490,240,  470,220, 460,190);
 ctx.bezierCurveTo(460,180,  482,250, 565,285);
 ctx.bezierCurveTo(520,240,  510,180,  510,155);
+ctx.stroke();
+
+/**
+ * 右边的头发
+ */
 ctx.lineTo(514,156);
 ctx.bezierCurveTo(520,200,  550,260, 566,272);
 ctx.bezierCurveTo(535,240,  525,180,  520,155);
 ctx.lineTo(538,158);
-ctx.bezierCurveTo(550,200,  580,240, 610,265);
-// ctx.bezierCurveTo(660,240,  620,200, 615,165);
-// ctx.lineTo(635,170);
-// ctx.bezierCurveTo(630,180,  680,260, 713,278);
-// ctx.bezierCurveTo(710,260,  690,240, 685,220);
-// ctx.lineTo(695,220)
-// ctx.bezierCurveTo(710,230,  690,240, 740,270);
-// ctx.bezierCurveTo(765,290,  755,320, 760,350);
-// ctx.lineTo(760,170)
+ctx.bezierCurveTo(550,200,  580,240, 628,280);
+ctx.bezierCurveTo(590,240,  580,190,  582,175);
+ctx.lineTo(592,176);
+ctx.bezierCurveTo(600,200,  640,260, 675,285);
+ctx.bezierCurveTo(640,260,  610,200, 602,180);
+ctx.lineTo(620,190)
+ctx.bezierCurveTo(650,230,  670,280, 702,295);
+ctx.bezierCurveTo(705,290,  690,260, 678,240);
+ctx.lineTo(680,238)
+ctx.bezierCurveTo(690,250,  700,270, 718,280);
+ctx.bezierCurveTo(735,290,  750,300, 750,370);
+ctx.lineTo(755,370);
+ctx.lineTo(748,176)
+ctx.strokeStyle = 'black';
 ctx.stroke();
-//
-//
+ctx.fillStyle = 'black';
+ctx.fill();
+
 // /**
 // * 帽子
 // */

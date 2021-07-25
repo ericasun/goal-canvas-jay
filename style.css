@@ -6,7 +6,7 @@
 
 body{
     height: 100vh;
-    background-image: url("./jay.png");
+    /*background-image: url("./jay.png");*/
     background-repeat: no-repeat;
     background-position-y: center;
     background-size: contain;
