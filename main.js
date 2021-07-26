@@ -57,7 +57,7 @@ ctx.bezierCurveTo(670,270,700,320,720,342);
 /**
  * 脸型内层轮廓
  */
-ctx.bezierCurveTo(620,680,250,710,238,245);
+ctx.bezierCurveTo(620,680,250,700,238,245);
 ctx.strokeStyle = '#f8d4aa';
 ctx.stroke();
 ctx.fillStyle= '#f8d4aa';

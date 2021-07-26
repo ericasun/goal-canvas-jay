@@ -6,13 +6,15 @@
 
 body{
     height: 100vh;
-    background-image: url("./jay.png");
-    background-repeat: no-repeat;
-    background-position-y: center;
-    background-size: contain;
+    /*background-image: url("./jay.png");*/
+    /*background-repeat: no-repeat;*/
+    /*background-position-y: center;*/
+    /*background-size: contain;*/
 }
 
 main{
+    display:flex;
+    align-items: flex-start;
     /*height: 100vh;*/
     /*border:5px solid black;*/
     /*background-image: url("./jay.png");*/
@@ -21,21 +23,17 @@ main{
     /*background-size: contain;*/
 }
 
-#canvas{
+canvas{
+    /*width: 750px;*/
     /*background-color:black;*/
     /*border:10px solid white;*/
 }
 
-.tools{
-    float: left;
-    /*position:absolute;*/
-    /*left:5px;*/
-    /*top: 5px;*/
+#tools{
+
 }
 
 .content{
-    /*display: flex;*/
-    /*justify-content: center;*/
-    /*align-items: center;*/
-    /*border: 5px solid blue;*/
+    width: 755px;
+    background-color:black;
 }
