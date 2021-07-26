@@ -128,7 +128,7 @@ var id = setInterval(function () {
     return;
   }
 
-  showCode.innerText = string.substr(0, n);
+  showCode.innerText = string.substr(0, n); // 删除原来的script
 
   if (n != 0) {
     var newDemo = demo.childNodes;
@@ -137,7 +137,8 @@ var id = setInterval(function () {
       // 一定要倒序，正序是删不干净的，可自行尝试
       demo.removeChild(newDemo[i]);
     }
-  }
+  } // 创建新的script
+
 
   var newScript = document.createElement('script');
   newScript.innerHTML = string.substr(0, n);

@@ -363,13 +363,15 @@ let id = setInterval(()=> {
         return;
     }
     showCode.innerText = string.substr(0,n);
+    // 删除原来的script
     if( n != 0){
         var newDemo = demo.childNodes;
         for (var i = newDemo.length - 1; i >= 0; i--) { // 一定要倒序，正序是删不干净的，可自行尝试
             demo.removeChild(newDemo[i]);
         }
     }
-    const newScript = document.createElement('script');
+    // 创建新的script
+    var newScript = document.createElement('script');
     newScript.innerHTML = string.substr(0, n);
     demo.appendChild(newScript);
 }, 1)
