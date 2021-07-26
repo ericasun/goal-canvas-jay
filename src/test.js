@@ -1,19 +1,18 @@
-let string = `
 /**
-*   获取画布 
-*/
-var canvas = document.getElementById("canvas");
+ *   获取画布
+ */
+let canvas = document.getElementById("canvas");
 
 /**
-*  设置画布宽高
-*/
-canvas.width = document.documentElement.clientWidth;
-canvas.height = document.documentElement.clientHeight;
-var ctx = canvas.getContext("2d");
+ *  设置画布宽高
+ */
+canvas.width = document.documentElement.clientWidth
+canvas.height = document.documentElement.clientHeight
+let ctx = canvas.getContext("2d");
 
 /**
-* 设置画笔
-*/
+ * 设置画笔
+ */
 ctx.lineWidth = 5;
 ctx.lineCap = "round";
 
@@ -28,7 +27,7 @@ ctx.bezierCurveTo(300,80,  600,80, 750,200);
 ctx.lineTo(750,358);
 ctx.strokeStyle = '#c69253';
 ctx.stroke();
-ctx.fillStyle= '#c69253'
+ctx.fillStyle= '#c69253';
 ctx.fill();
 
 /**
@@ -93,7 +92,7 @@ ctx.fillStyle = 'black';
 ctx.fill();
 
 /**
- * 开始画眼睛
+ * 眼睛
  */
 
 /**
@@ -258,8 +257,8 @@ ctx.fillStyle = 'black';
 ctx.fill();
 
 /**
-* 帽子
-*/
+ * 帽子
+ */
 ctx.beginPath();
 ctx.moveTo(90,0);
 ctx.bezierCurveTo(80,30,  80,100, 102,212);
@@ -294,7 +293,7 @@ ctx.fillStyle = 'black';
 ctx.fill();
 
 /**
- * 开始画衣服
+ * 衣服
  */
 /**
  * 左边衣服
@@ -352,31 +351,3 @@ ctx.strokeStyle = '#fc220d';
 ctx.stroke();
 ctx.fillStyle = '#fc220d';
 ctx.fill();
-`
-
-let n = 0;
-
-let id = setInterval(()=> {
-    n += 1;
-    if( n > string.length) {
-        window.clearInterval(id);
-        return;
-    }
-    showCode.innerText = string.substr(0,n);
-    // 删除原来的script
-    if( n != 0){
-        var newDemo = demo.childNodes;
-        for (var i = newDemo.length - 1; i >= 0; i--) { // 一定要倒序，正序是删不干净的，可自行尝试
-            demo.removeChild(newDemo[i]);
-        }
-    }
-    // 创建新的script
-    var newScript = document.createElement('script');
-    newScript.innerHTML = string.substr(0, n);
-    demo.appendChild(newScript);
-}, 1)
-
-
-
-
-
