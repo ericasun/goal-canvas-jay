@@ -1,17 +1,25 @@
-let canvas = document.getElementById("canvas");
-canvas.width = document.documentElement.clientWidth
-canvas.height = document.documentElement.clientHeight
-let ctx = canvas.getContext("2d");
-ctx.fillStyle = 'yellow';
-ctx.strokeStyle = 'blue';
+let string = `
+/**
+*   获取画布 
+*/
+var canvas = document.getElementById("canvas");
+
+/**
+*  设置画布宽高
+*/
+canvas.width = document.documentElement.clientWidth;
+canvas.height = document.documentElement.clientHeight;
+var ctx = canvas.getContext("2d");
+
+/**
+* 设置画笔
+*/
 ctx.lineWidth = 5;
 ctx.lineCap = "round";
 
-const string = `
-<script>
 /**
-* 脸型外层轮廓
-*/
+ * 脸型外层轮廓
+ */
 ctx.beginPath();
 ctx.moveTo(185,220);
 ctx.bezierCurveTo(240,700,  620,720, 750,358);
@@ -20,7 +28,7 @@ ctx.bezierCurveTo(300,80,  600,80, 750,200);
 ctx.lineTo(750,358);
 ctx.strokeStyle = '#c69253';
 ctx.stroke();
-ctx.fillStyle= '#c69253';
+ctx.fillStyle= '#c69253'
 ctx.fill();
 
 /**
@@ -85,7 +93,7 @@ ctx.fillStyle = 'black';
 ctx.fill();
 
 /**
- * 眼睛
+ * 开始画眼睛
  */
 
 /**
@@ -286,7 +294,7 @@ ctx.fillStyle = 'black';
 ctx.fill();
 
 /**
- * 衣服
+ * 开始画衣服
  */
 /**
  * 左边衣服
@@ -344,22 +352,30 @@ ctx.strokeStyle = '#fc220d';
 ctx.stroke();
 ctx.fillStyle = '#fc220d';
 ctx.fill();
-</script>
+console.log('结束');
 `
 
-let n = 1
+let n = 0;
 
-code.innerText =  string.substr(0,n)
-// demo2.innerHTML = string.substr(0,n)
-// demo2.setAttribute(string.substr(0,n))
 let id = setInterval(()=> {
-    n += 1
-    if (n > string.length){
-        window.clearInterval(id)
+    n += 1;
+    if( n > string.length) {
+        window.clearInterval(id);
         return;
     }
-    code.innerText = string.substr(0,n)
-    // demo2.innerHTML = string.substr(0,n)
-    // demo2.setAttribute(string.substr(0,n))
+    showCode.innerText = string.substr(0,n);
+    if( n != 0){
+        var newDemo = demo.childNodes;
+        for (var i = newDemo.length - 1; i >= 0; i--) { // 一定要倒序，正序是删不干净的，可自行尝试
+            demo.removeChild(newDemo[i]);
+        }
+    }
+    const newScript = document.createElement('script');
+    newScript.innerHTML = string.substr(0, n);
+    demo.appendChild(newScript);
+}, 1)
 
-}, 300)
+
+
+
+

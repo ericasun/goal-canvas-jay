@@ -1,9 +1,18 @@
+/**
+ *   获取画布
+ */
 let canvas = document.getElementById("canvas");
+
+/**
+ *  设置画布宽高
+ */
 canvas.width = document.documentElement.clientWidth
 canvas.height = document.documentElement.clientHeight
 let ctx = canvas.getContext("2d");
-ctx.fillStyle = 'yellow';
-ctx.strokeStyle = 'blue';
+
+/**
+ * 设置画笔
+ */
 ctx.lineWidth = 5;
 ctx.lineCap = "round";
 
