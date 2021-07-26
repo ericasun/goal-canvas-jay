@@ -1,13 +1,14 @@
 let canvas = document.getElementById("canvas");
 canvas.width = document.documentElement.clientWidth
 canvas.height = document.documentElement.clientHeight
-
 let ctx = canvas.getContext("2d");
 ctx.fillStyle = 'yellow';
 ctx.strokeStyle = 'blue';
 ctx.lineWidth = 5;
 ctx.lineCap = "round";
 
+const string = `
+<script>
 /**
 * 脸型外层轮廓
 */
@@ -343,3 +344,22 @@ ctx.strokeStyle = '#fc220d';
 ctx.stroke();
 ctx.fillStyle = '#fc220d';
 ctx.fill();
+</script>
+`
+
+let n = 1
+
+code.innerText =  string.substr(0,n)
+// demo2.innerHTML = string.substr(0,n)
+// demo2.setAttribute(string.substr(0,n))
+let id = setInterval(()=> {
+    n += 1
+    if (n > string.length){
+        window.clearInterval(id)
+        return;
+    }
+    code.innerText = string.substr(0,n)
+    // demo2.innerHTML = string.substr(0,n)
+    // demo2.setAttribute(string.substr(0,n))
+
+}, 300)
