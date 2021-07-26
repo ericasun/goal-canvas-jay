@@ -12,9 +12,9 @@ ctx.lineCap = "round";
 * 脸型外层轮廓
 */
 // ctx.beginPath();
-// ctx.moveTo(180,220);
+// ctx.moveTo(185,220);
 // ctx.bezierCurveTo(240,700,  620,720, 750,358);
-// ctx.moveTo(180,220);
+// ctx.moveTo(185,220);
 // ctx.bezierCurveTo(300,80,  600,80, 750,200);
 // ctx.lineTo(750,358);
 // ctx.strokeStyle = '#c69253';
@@ -22,19 +22,37 @@ ctx.lineCap = "round";
 // ctx.fillStyle= '#c69253';
 // ctx.fill();
 //
+/**
+ * 左边流海阴影
+ */
+ctx.beginPath();
+ctx.moveTo(238,245);
+ctx.lineTo(248, 240);
+ctx.lineTo(270, 255);
+ctx.bezierCurveTo(265,245,265,240,258,235);
+ctx.bezierCurveTo(275,245,275,250,280, 255);
+ctx.bezierCurveTo(284,260,288,258,290, 255);
+ctx.bezierCurveTo(300,245,275,235,275,228);
+ctx.bezierCurveTo(280,220,290,220,300,226);
+ctx.bezierCurveTo(320,240,330,260,400,290);
+ctx.bezierCurveTo(320,240,330,260,400,290);
+ctx.bezierCurveTo(400,270,380,260,350,240);
+ctx.bezierCurveTo(380,240,420,220,460,275);
+ctx.bezierCurveTo(440,260,380,220,350,255);
+
 // /**
 //  * 脸型阴影轮廓
 //  */
-// ctx.beginPath();
-// ctx.moveTo(238,240);
+
 // ctx.bezierCurveTo(250,710,  620,680, 720,342);
 // ctx.moveTo(238,240);
 // ctx.bezierCurveTo(300,180,  600,160, 720,342);
 // ctx.strokeStyle = '#f8d4aa';
-// ctx.stroke();
+ctx.strokeStyle = 'blue';
+ctx.stroke();
 // ctx.fillStyle= '#f8d4aa';
 // ctx.fill();
-//
+
 // /**
 //  * 眉毛
 //  * */
@@ -111,7 +129,6 @@ ctx.lineCap = "round";
 // ctx.strokeStyle = 'black';
 // ctx.stroke();
 //
-//
 // /**
 //  * 腮红
 //  */
@@ -153,73 +170,73 @@ ctx.lineCap = "round";
 // ctx.strokeStyle = 'black';
 // ctx.stroke();
 //
+/**
+ * 头发
+ */
+ctx.beginPath();
+ctx.moveTo(748,176);
+ctx.bezierCurveTo(600,35,  170,32, 125,250);
+ctx.stroke();
+
+/**
+ * 左边的头发
+ */
+ctx.bezierCurveTo(135,265,  145,260, 145,240);
+ctx.bezierCurveTo(155,220,  155,255, 176,230);
+ctx.bezierCurveTo(175,250,  180,265, 182,280);
+ctx.bezierCurveTo(185,285,  195,285, 200,270);
+ctx.bezierCurveTo(190,240,  210,215, 228,200);
+ctx.bezierCurveTo(240,220,  250,230, 268,235);
+ctx.bezierCurveTo(270,220,  262,210, 255,185);
+ctx.lineTo(258,183);
+ctx.bezierCurveTo(260,200,  280,220, 290,238);
+ctx.bezierCurveTo(285,230,  280,200, 275,175);
+ctx.lineTo(290,165);
+ctx.bezierCurveTo(300,190,  360,260, 388,275);
+ctx.bezierCurveTo(360,260,  330,170, 320,152);
+ctx.lineTo(330,148);
+ctx.bezierCurveTo(360,200,  380,240, 448,258);
+ctx.bezierCurveTo(380,210,  370,170, 355,150);
+ctx.lineTo(359,149);
+ctx.bezierCurveTo(380,180,  415,220, 428,228);
+ctx.bezierCurveTo(430,210,  420,190, 405,165);
+ctx.stroke();
+
 // /**
-//  * 头发
+//  * 中间的头发
 //  */
-// ctx.beginPath();
-// ctx.moveTo(748,176);
-// ctx.bezierCurveTo(600,35,  170,32, 125,250);
-// ctx.stroke();
-//
-// /**
-//  * 左边的头发
-//  */
-// ctx.bezierCurveTo(135,265,  145,260, 145,240);
-// ctx.bezierCurveTo(155,220,  155,255, 176,230);
-// ctx.bezierCurveTo(175,250,  180,265, 182,280);
-// ctx.bezierCurveTo(185,285,  195,285, 200,270);
-// ctx.bezierCurveTo(190,240,  210,215, 228,200);
-// ctx.bezierCurveTo(240,220,  250,230, 268,235);
-// ctx.bezierCurveTo(270,220,  262,210, 255,185);
-// ctx.lineTo(258,183);
-// ctx.bezierCurveTo(260,200,  280,220, 290,238);
-// ctx.bezierCurveTo(285,230,  280,200, 275,175);
-// ctx.lineTo(290,165);
-// ctx.bezierCurveTo(300,190,  360,260, 388,275);
-// ctx.bezierCurveTo(360,260,  330,170, 320,152);
-// ctx.lineTo(330,148);
-// ctx.bezierCurveTo(360,200,  380,240, 448,258);
-// ctx.bezierCurveTo(380,210,  370,170, 355,150);
-// ctx.lineTo(359,149);
-// ctx.bezierCurveTo(380,180,  415,220, 428,228);
-// ctx.bezierCurveTo(430,210,  420,190, 405,165);
-// ctx.stroke();
-//
-// // /**
-// //  * 中间的头发
-// //  */
-// // ctx.lineTo(408,162);
-// // ctx.bezierCurveTo(436,210,  472,240, 495,250);
-// // ctx.bezierCurveTo(490,240,  470,220, 460,190);
-// // ctx.bezierCurveTo(460,180,  482,250, 565,285);
-// // ctx.bezierCurveTo(520,240,  510,180,  510,155);
-// // ctx.stroke();
-//
-// /**
-//  * 右边的头发
-//  */
-// ctx.lineTo(514,156);
-// ctx.bezierCurveTo(520,200,  550,260, 566,272);
-// ctx.bezierCurveTo(535,240,  525,180,  520,155);
-// ctx.lineTo(538,158);
-// ctx.bezierCurveTo(550,200,  580,240, 628,280);
-// ctx.bezierCurveTo(590,240,  580,190,  582,175);
-// ctx.lineTo(592,176);
-// ctx.bezierCurveTo(600,200,  640,260, 675,285);
-// ctx.bezierCurveTo(640,260,  610,200, 602,180);
-// ctx.lineTo(620,190)
-// ctx.bezierCurveTo(650,230,  670,280, 702,295);
-// ctx.bezierCurveTo(705,290,  690,260, 678,240);
-// ctx.lineTo(680,238)
-// ctx.bezierCurveTo(690,250,  700,270, 718,280);
-// ctx.bezierCurveTo(735,290,  750,300, 750,370);
-// ctx.lineTo(750,370);
-// ctx.closePath();
-// ctx.strokeStyle = 'black';
-// ctx.stroke();
-// ctx.fillStyle = 'black';
-// ctx.fill();
-//
+ctx.lineTo(408,162);
+ctx.bezierCurveTo(436,210,  472,240, 495,250);
+ctx.bezierCurveTo(490,240,  470,220, 460,190);
+ctx.bezierCurveTo(460,180,  482,250, 565,285);
+ctx.bezierCurveTo(520,240,  510,180,  510,155);
+ctx.stroke();
+
+/**
+ * 右边的头发
+ */
+ctx.lineTo(514,156);
+ctx.bezierCurveTo(520,200,  550,260, 566,272);
+ctx.bezierCurveTo(535,240,  525,180,  520,155);
+ctx.lineTo(538,158);
+ctx.bezierCurveTo(550,200,  580,240, 628,280);
+ctx.bezierCurveTo(590,240,  580,190,  582,175);
+ctx.lineTo(592,176);
+ctx.bezierCurveTo(600,200,  640,260, 675,285);
+ctx.bezierCurveTo(640,260,  610,200, 602,180);
+ctx.lineTo(620,190)
+ctx.bezierCurveTo(650,230,  670,280, 702,295);
+ctx.bezierCurveTo(705,290,  690,260, 678,240);
+ctx.lineTo(680,238)
+ctx.bezierCurveTo(690,250,  700,270, 718,280);
+ctx.bezierCurveTo(735,290,  750,300, 750,370);
+ctx.lineTo(750,370);
+ctx.closePath();
+ctx.strokeStyle = 'black';
+ctx.stroke();
+ctx.fillStyle = 'black';
+ctx.fill();
+
 // /**
 // * 帽子
 // */
@@ -227,8 +244,8 @@ ctx.lineCap = "round";
 // ctx.moveTo(90,0);
 // ctx.bezierCurveTo(80,30,  80,100, 102,212);
 // ctx.bezierCurveTo(75,260,  85,330, 160,380);
-// ctx.bezierCurveTo(190,620,  370,740, 570,680);
-// ctx.bezierCurveTo(600,670,  720,630, 750,555);
+// ctx.bezierCurveTo(190,595,  370,730, 570,680);
+// ctx.bezierCurveTo(620,660,  720,620, 750,555);
 // ctx.lineTo(750,445);
 // ctx.bezierCurveTo(700,570,  620,635, 478,670);
 // ctx.bezierCurveTo(420,660,  200,560, 176,230);
@@ -255,13 +272,63 @@ ctx.lineCap = "round";
 // ctx.stroke();
 // ctx.fillStyle = 'black';
 // ctx.fill();
-
-
-/**
- * 衣服
- */
-
-/**
- * 左边衣服
- */
-
+//
+// /**
+//  * 衣服
+//  */
+// /**
+//  * 左边衣服
+//  */
+// ctx.beginPath();
+// ctx.moveTo(110,355);
+// ctx.bezierCurveTo(128,450,  135,470, 152,605);
+// ctx.bezierCurveTo(149,608,  151,608, 148,605);
+// ctx.bezierCurveTo(125,470,  115,450, 115,455);
+// ctx.lineTo(0, 515);
+// ctx.lineTo(0, 754);
+// ctx.lineTo(315, 754);
+// ctx.bezierCurveTo(320,740,  300,710, 260,690);
+// ctx.bezierCurveTo(258,670,  275,670, 288,685);
+// ctx.bezierCurveTo(310,700,  330,740, 332, 754);
+// ctx.lineTo(350, 754);
+// ctx.bezierCurveTo(350,720,  280,640, 245, 605);
+// ctx.bezierCurveTo(170,500,  160,480, 148,395);
+// ctx.closePath();
+// ctx.strokeStyle = '#fa220b';
+// ctx.stroke();
+// ctx.fillStyle = '#fa220b';
+// ctx.fill();
+//
+// /**
+//  * 右边衣服
+//  */
+// ctx.beginPath();
+// ctx.moveTo(332,670);
+// ctx.bezierCurveTo(400,710,  500,720, 564,695);
+// ctx.lineTo(560,685);
+// ctx.bezierCurveTo(580,680,  600,675, 650,650);
+// ctx.bezierCurveTo(650,654,  650,658, 660,660);
+// ctx.bezierCurveTo(690,640,  720,625, 750, 590);
+// ctx.lineTo(750, 638);
+// ctx.bezierCurveTo(720,680,  670,720, 625, 754);
+// ctx.lineTo(430, 754);
+// ctx.bezierCurveTo(390,740,  360,710, 360, 710);
+// ctx.bezierCurveTo(410,740,  450,730, 450, 735);
+// ctx.bezierCurveTo(400,720,  360,700, 332,670);
+// ctx.strokeStyle = '#fb220b';
+// ctx.stroke();
+// ctx.fillStyle = '#fb220b';
+// ctx.fill();
+//
+// /**
+//  * 右下角的三角
+//  */
+// ctx.beginPath();
+// ctx.moveTo(750, 754);
+// ctx.lineTo(750, 662);
+// ctx.lineTo(650, 754);
+// ctx.closePath();
+// ctx.strokeStyle = '#fc220d';
+// ctx.stroke();
+// ctx.fillStyle = '#fc220d';
+// ctx.fill();

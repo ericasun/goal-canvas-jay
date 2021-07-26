@@ -21,13 +21,13 @@ main{
     /*background-size: contain;*/
 }
 
-
 #canvas{
     /*background-color:black;*/
     /*border:10px solid white;*/
 }
 
 .tools{
+    float: left;
     /*position:absolute;*/
     /*left:5px;*/
     /*top: 5px;*/
