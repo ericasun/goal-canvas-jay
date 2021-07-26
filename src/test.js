@@ -352,7 +352,6 @@ ctx.strokeStyle = '#fc220d';
 ctx.stroke();
 ctx.fillStyle = '#fc220d';
 ctx.fill();
-console.log('结束');
 `
 
 let n = 0;
