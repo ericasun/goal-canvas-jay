@@ -43,3 +43,6 @@
     display: none;
 }
 
+#buttons > button {
+    margin: 20px 5px;
+}

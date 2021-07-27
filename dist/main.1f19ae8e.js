@@ -136,7 +136,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var codeNum = 1;
 var scriptNum = 1;
-var time = 0;
+var time = 100;
 
 var run = function run() {
   codeNum += 10;

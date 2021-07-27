@@ -3,7 +3,7 @@ import string from './script';
 let codeNum = 1;
 let scriptNum = 1;
 
-let time = 0;
+let time = 100;
 
 const run = () => {
     codeNum += 10;
