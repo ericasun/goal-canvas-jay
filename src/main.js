@@ -1,4 +1,4 @@
-// import string2 from './script';
+// import string2 from './script.js';
 const string = `
 /**
 *   获取画布 
