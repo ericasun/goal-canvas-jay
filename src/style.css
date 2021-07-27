@@ -4,29 +4,23 @@
 }
 *::before, *::after{box-sizing: border-box;}
 
-body{
-    height: 100vh;
-    /*background-image: url("./jay.png");*/
-    /*background-repeat: no-repeat;*/
-    /*background-position-y: center;*/
-    /*background-size: contain;*/
+/*上下布局*/
+@media screen and (max-width: 1024px) {
+    main{
+        background-color:blue;
+        display:flex;
+        flex-direction: column;
+    }
 }
 
-main{
-    display:flex;
-    align-items: flex-start;
-    /*height: 100vh;*/
-    /*border:5px solid black;*/
-    /*background-image: url("./jay.png");*/
-    /*background-repeat: no-repeat;*/
-    /*background-position-y: center;*/
-    /*background-size: contain;*/
-}
-
-canvas{
-    /*width: 750px;*/
-    /*background-color:black;*/
-    /*border:10px solid white;*/
+/*左右布局*/
+@media screen and (min-width: 1025px) {
+    main{
+        background-color: yellow;
+        display:flex;
+        align-items: flex-start;
+        height: 100vh;
+    }
 }
 
 #tools{
@@ -34,6 +28,11 @@ canvas{
 }
 
 .content{
-    width: 755px;
+    text-align: center;
     background-color:gray;
+}
+
+#showCode{
+    border: 1px solid red;
+    overflow: hidden;
 }

@@ -7,8 +7,14 @@ var canvas = document.getElementById("canvas");
 /**
 *  设置画布宽高
 */
-canvas.width = document.documentElement.clientWidth;
-canvas.height = document.documentElement.clientHeight;
+if( document.documentElement.clientWidth > 1024){
+    canvas.width = 752;
+    canvas.height = document.documentElement.clientHeight;
+} else {
+    canvas.width = document.documentElement.clientWidth ;
+    canvas.height = document.documentElement.clientHeight * 0.6;
+}
+
 var ctx = canvas.getContext("2d");
 
 /**
@@ -354,27 +360,47 @@ ctx.fillStyle = '#fc220d';
 ctx.fill();
 `
 
-let n = 0;
+// 设置代码展示区宽高
+if( document.documentElement.clientWidth > 1024){
+    showCode.width = document.documentElement.clientWidth - canvas.width;
+    showCode.height = canvas.height;
+    console.log('大于1024时的宽高',showCode.width,showCode.height);
+} else {
+    showCode.width = document.documentElement.clientWidth;
+    showCode.height = document.documentElement.clientHeight - canvas.height;
+    console.log('小于1024时的宽高',showCode.width,showCode.height);
+}
 
-let id = setInterval(()=> {
-    n += 1;
-    if( n > string.length) {
-        window.clearInterval(id);
-        return;
-    }
-    showCode.innerText = string.substr(0,n);
-    // 删除原来的script
-    if( n != 0){
-        var newDemo = demo.childNodes;
-        for (var i = newDemo.length - 1; i >= 0; i--) { // 一定要倒序，正序是删不干净的，可自行尝试
-            demo.removeChild(newDemo[i]);
-        }
-    }
-    // 创建新的script
-    var newScript = document.createElement('script');
-    newScript.innerHTML = string.substr(0, n);
-    demo.appendChild(newScript);
-}, 1)
+showCode.height =
+
+// let codeNum = 0;
+// let scriptNum = 0;
+//
+// let id = setInterval(()=> {
+//     codeNum += 1;
+//     scriptNum += 10;
+//     if( (codeNum > string.length) && (scriptNum > string.length)) {
+//         window.clearInterval(id);
+//         return;
+//     }
+//     showCode.innerText = string.substr(0,codeNum);
+//     // 删除原来的script
+//     if( scriptNum != 0){
+//         var newDemo = demo.childNodes;
+//         for (var i = newDemo.length - 1; i >= 0; i--) { // 一定要倒序，正序是删不干净的，可自行尝试
+//             demo.removeChild(newDemo[i]);
+//         }
+//     }
+//     // 创建新的script
+//     var newScript = document.createElement('script');
+//     newScript.innerHTML = string.substr(0, scriptNum);
+//     demo.appendChild(newScript);
+// }, 1)
+
+showCode.innerText = string.substr(0,string.length);
+var newScript = document.createElement('script');
+newScript.innerHTML = string.substr(0, string.length);
+demo.appendChild(newScript);
 
 
 

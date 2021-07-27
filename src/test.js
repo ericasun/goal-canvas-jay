@@ -279,20 +279,6 @@ ctx.fillStyle = 'red';
 ctx.fill();
 
 /**
- * 下巴这里的黑色阴影
- */
-ctx.beginPath();
-ctx.moveTo(192,280);
-ctx.bezierCurveTo(220,560, 420,660, 478,665);
-ctx.bezierCurveTo(620,635,  700,570, 750,444);
-ctx.lineTo(750,370);
-ctx.bezierCurveTo(620,710,  260,690, 192,280);
-ctx.strokeStyle = 'black';
-ctx.stroke();
-ctx.fillStyle = 'black';
-ctx.fill();
-
-/**
  * 衣服
  */
 /**
@@ -351,3 +337,4 @@ ctx.strokeStyle = '#fc220d';
 ctx.stroke();
 ctx.fillStyle = '#fc220d';
 ctx.fill();
+
