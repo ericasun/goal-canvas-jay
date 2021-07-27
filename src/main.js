@@ -10,13 +10,14 @@ var canvas = document.getElementById("canvas");
 if( document.documentElement.clientWidth > 1024){
     canvas.width = 752;
     canvas.height = document.documentElement.clientHeight;
-    showCode.width = document.documentElement.clientWidth - canvas.width;
-    showCode.height = canvas.height;
+    codeDisplay.style.width = document.documentElement.clientWidth - canvas.width;
+    codeDisplay.style.height = canvas.height - buttons.style.height + 'px';
 } else {
-    canvas.width = document.documentElement.clientWidth ;
+    canvas.width = document.documentElement.clientWidth;
     canvas.height = document.documentElement.clientHeight * 0.6;
-    showCode.width = document.documentElement.clientWidth;
-    showCode.height = document.documentElement.clientHeight - canvas.height;
+    codeDisplay.style.width = canvas.width;
+    let canvasAndButtonsH = canvas.height - buttons.style.height;
+    codeDisplay.style.height = document.documentElement.clientHeight - canvasAndButtonsH + 'px' ;
 }
 
 var ctx = canvas.getContext("2d");
@@ -369,17 +370,14 @@ let scriptNum = 0;
 
 let id = setInterval(()=> {
     codeNum += 1;
-    scriptNum += 2;
+    scriptNum += 3;
     if( (codeNum > string.length) && (scriptNum > string.length)) {
         window.clearInterval(id);
         return;
     }
 
     // 代码展示
-    showCode.innerText = string.substr(0,codeNum);
-
-    // 代码展示区向上滚动
-    showCode.scrollTop = showCode.scrollHeight;
+    codeDisplay.innerText = string.substr(0,codeNum);
 
     // 让JS代码生效
     // 删除原来的script
@@ -393,14 +391,29 @@ let id = setInterval(()=> {
     var newScript = document.createElement('script');
     newScript.innerHTML = string.substr(0, scriptNum);
     demo.appendChild(newScript);
+    console.log('-------高度----------',codeDisplay.height);
 }, 1)
 
-showCode.innerText = string.substr(0,string.length);
-var newScript = document.createElement('script');
-newScript.innerHTML = string.substr(0, string.length);
-demo.appendChild(newScript);
+// 代码展示区向上滚动
+codeDisplay.scrollTop = codeDisplay.scrollHeight;
 
-console.log(showCode.height)
+if( document.documentElement.clientWidth > 1024){
+    codeDisplay.width = document.documentElement.clientWidth - 752;
+    codeDisplay.height = document.documentElement.clientHeight + 'px';
+} else {
+    codeDisplay.width = document.documentElement.clientWidth;
+    codeDisplay.height = document.documentElement.clientHeight * 0.4 + 'px';
+}
+
+codeDisplay.style.overflow = 'hidden'
+
+
+// codeDisplay.innerText = string.substr(0,string.length);
+// var newScript = document.createElement('script');
+// newScript.innerHTML = string.substr(0, string.length);
+// demo.appendChild(newScript);
+//
+// console.log(codeDisplay.height)
 
 
 

@@ -7,7 +7,6 @@
 /*屏幕宽度大于1024上下布局*/
 @media screen and (max-width: 1024px) {
     main{
-        background-color:blue;
         display:flex;
         flex-direction: column;
     }
@@ -16,7 +15,6 @@
 /*屏幕宽度小于1024左右布局*/
 @media screen and (min-width: 1025px) {
     main{
-        background-color: yellow;
         display:flex;
         align-items: flex-start;
         height: 100vh;
@@ -32,12 +30,13 @@
     background-color:gray;
 }
 
-#showCode{
-    border: 5px solid red;
+#codeDisplay{
     overflow: hidden;
-    /*position: fixed;*/
-    /*top:0;*/
-    height: 180px;
+}
+
+/*隐藏滚动条*/
+#codeDisplay::-webkit-scrollbar{
+    display: none;
 }
 
 #demo{
