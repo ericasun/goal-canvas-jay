@@ -10,13 +10,9 @@ var canvas = document.getElementById("canvas");
 if( document.documentElement.clientWidth > 1024){
     canvas.width = 752;
     canvas.height = document.documentElement.clientHeight;
-    showCode.width = document.documentElement.clientWidth - canvas.width;
-    showCode.height = canvas.height;
 } else {
     canvas.width = document.documentElement.clientWidth ;
     canvas.height = document.documentElement.clientHeight * 0.6;
-    showCode.width = document.documentElement.clientWidth;
-    showCode.height = document.documentElement.clientHeight - canvas.height;
 }
 
 var ctx = canvas.getContext("2d");
@@ -363,44 +359,3 @@ ctx.stroke();
 ctx.fillStyle = '#fc220d';
 ctx.fill();
 `
-
-let codeNum = 0;
-let scriptNum = 0;
-
-let id = setInterval(()=> {
-    codeNum += 1;
-    scriptNum += 2;
-    if( (codeNum > string.length) && (scriptNum > string.length)) {
-        window.clearInterval(id);
-        return;
-    }
-
-    // 代码展示
-    showCode.innerText = string.substr(0,codeNum);
-
-    // 代码展示区向上滚动
-    showCode.scrollTop = showCode.scrollHeight;
-
-    // 让JS代码生效
-    // 删除原来的script
-    if( scriptNum != 0){
-        var newDemo = demo.childNodes;
-        for (var i = newDemo.length - 1; i >= 0; i--) { // 一定要倒序，正序是删不干净的，可自行尝试
-            demo.removeChild(newDemo[i]);
-        }
-    }
-    // 创建新的script
-    var newScript = document.createElement('script');
-    newScript.innerHTML = string.substr(0, scriptNum);
-    demo.appendChild(newScript);
-}, 1)
-
-showCode.innerText = string.substr(0,string.length);
-var newScript = document.createElement('script');
-newScript.innerHTML = string.substr(0, string.length);
-demo.appendChild(newScript);
-
-console.log(showCode.height)
-
-
-
