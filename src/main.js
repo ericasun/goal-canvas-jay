@@ -365,19 +365,21 @@ ctx.fillStyle = '#fc220d';
 ctx.fill();
 `
 
-let codeNum = 0;
-let scriptNum = 0;
+let codeNum = 1;
+let scriptNum = 1;
 
-let id = setInterval(()=> {
-    codeNum += 1;
-    scriptNum += 3;
-    if( (codeNum > string.length) && (scriptNum > string.length)) {
+let time = 0;
+
+const run = () => {
+    codeNum += 10;
+    scriptNum += 15;
+    if( (codeNum > string.length + codeNum) && (scriptNum > string.length + scriptNum)) {
         window.clearInterval(id);
         return;
     }
 
     // 代码展示
-    codeDisplay.innerText = string.substr(0,codeNum);
+    codeDisplay.innerText = string.substr(0, codeNum);
 
     // 让JS代码生效
     // 删除原来的script
@@ -391,29 +393,47 @@ let id = setInterval(()=> {
     var newScript = document.createElement('script');
     newScript.innerHTML = string.substr(0, scriptNum);
     demo.appendChild(newScript);
-    console.log('-------高度----------',codeDisplay.height);
-}, 1)
 
-// 代码展示区向上滚动
-codeDisplay.scrollTop = codeDisplay.scrollHeight;
-
-if( document.documentElement.clientWidth > 1024){
-    codeDisplay.width = document.documentElement.clientWidth - 752;
-    codeDisplay.height = document.documentElement.clientHeight + 'px';
-} else {
-    codeDisplay.width = document.documentElement.clientWidth;
-    codeDisplay.height = document.documentElement.clientHeight * 0.4 + 'px';
+    // 代码展示区向上滚动
+    codeDisplay.scrollTop = codeDisplay.scrollHeight;
 }
 
-codeDisplay.style.overflow = 'hidden'
+let id = setInterval(()=> {
+    run();
+}, time)
 
+// 设置按钮点击事件
+btnPause.onclick = () => {
+    window.clearInterval(id);
+}
 
-// codeDisplay.innerText = string.substr(0,string.length);
-// var newScript = document.createElement('script');
-// newScript.innerHTML = string.substr(0, string.length);
-// demo.appendChild(newScript);
-//
-// console.log(codeDisplay.height)
+btnPlay.onclick = () => {
+    id = setInterval( () => {
+        run();
+    }, time)
+}
 
+btnSlow.onclick = () => {
+    window.clearInterval(id);
+    time = 300;
+    id = setInterval( () => {
+        run();
+    }, time)
+}
 
+btnFast.onclick = () => {
+    console.log('100');
+    window.clearInterval(id);
+    time = 0;
+    id = setInterval( () => {
+        run();
+    }, time)
+}
 
+btnNormal.onclick = () => {
+    window.clearInterval(id);
+    time = 100;
+    id = setInterval( () => {
+        run();
+    }, time)
+}
