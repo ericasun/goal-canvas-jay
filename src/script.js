@@ -10,9 +10,14 @@ var canvas = document.getElementById("canvas");
 if( document.documentElement.clientWidth > 1024){
     canvas.width = 752;
     canvas.height = document.documentElement.clientHeight;
+    codeDisplay.style.width = document.documentElement.clientWidth - canvas.width;
+    codeDisplay.style.height = canvas.height - buttons.style.height + 'px';
 } else {
-    canvas.width = document.documentElement.clientWidth ;
+    canvas.width = document.documentElement.clientWidth;
     canvas.height = document.documentElement.clientHeight * 0.6;
+    codeDisplay.style.width = canvas.width;
+    let canvasAndButtonsH = canvas.height - buttons.style.height;
+    codeDisplay.style.height = document.documentElement.clientHeight - canvasAndButtonsH + 'px' ;
 }
 
 var ctx = canvas.getContext("2d");
