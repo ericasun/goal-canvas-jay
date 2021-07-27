@@ -1,4 +1,4 @@
-let string = `
+const string = `
 /**
 *   获取画布 
 */
@@ -359,3 +359,5 @@ ctx.stroke();
 ctx.fillStyle = '#fc220d';
 ctx.fill();
 `
+
+export default string;
