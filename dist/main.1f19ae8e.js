@@ -162,6 +162,7 @@ var run = function run() {
 
 
   var newScript = document.createElement('script');
+  newScript.type = "module";
   newScript.innerHTML = _script.default.substr(0, scriptNum);
   demo.appendChild(newScript); // 代码展示区向上滚动
 

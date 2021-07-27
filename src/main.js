@@ -26,6 +26,7 @@ const run = () => {
     }
     // 创建新的script
     var newScript = document.createElement('script');
+    newScript.type = "module";
     newScript.innerHTML = string.substr(0, scriptNum);
     demo.appendChild(newScript);
 
