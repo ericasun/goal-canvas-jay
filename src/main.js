@@ -1,3 +1,4 @@
+import string2 from './script';
 const string = `
 /**
 *   获取画布 
