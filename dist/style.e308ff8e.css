@@ -2,8 +2,9 @@
     box-sizing: border-box;
     margin: 0; padding: 0;
 }
-*::before, *::after{box-sizing: border-box;}
-
+*::before, *::after{
+    box-sizing: border-box;
+}
 /*屏幕宽度小于1024上下布局*/
 @media screen and (max-width: 1024px) {
     main{
@@ -14,7 +15,6 @@
         padding-left:25px;
     }
 }
-
 /*屏幕宽度大于1024左右布局*/
 @media screen and (min-width: 1025px) {
     main{
@@ -26,47 +26,38 @@
         padding:5px;
     }
 }
-
 .content{
     text-align: center;
     background-color:gray;
 }
-
 #codeDisplay{
     overflow-y: auto;
 }
-
 /*隐藏滚动条*/
 #codeDisplay::-webkit-scrollbar{
     display: none;
 }
-
 #demo{
     display: none;
 }
-
 .tools{
     display:flex;
     align-items: flex-start;
     justify-content: space-between;
 }
-
 #buttons{
     display:flex;
     flex-direction: column;
 }
-
 #buttons > button {
     margin: 5px;
     width: 80px;
     height: 40px;
     border-radius: 10px;
 }
-
 #btnFast{
     background-color: #4cad38;
 }
-
 main{
     position:fixed;
     top: 0;
