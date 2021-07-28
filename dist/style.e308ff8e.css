@@ -12,7 +12,7 @@
         flex-direction: column;
     }
     #codeDisplay{
-        padding-left:25px;
+        padding-left:50px;
     }
 }
 /*屏幕宽度大于1024左右布局*/
