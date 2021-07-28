@@ -363,6 +363,7 @@ ctx.strokeStyle = '#fc220d';
 ctx.stroke();
 ctx.fillStyle = '#fc220d';
 ctx.fill();
+/*完成*/
 `
 
 export default string;
