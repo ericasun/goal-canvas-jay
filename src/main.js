@@ -8,7 +8,7 @@ const run = () => {
     // 删除原来的script
     if( n !== 0){
         const newDemo = demo.childNodes;
-        for (var i = newDemo.length - 1; i >= 0; i--) { // 一定要倒序，正序是删不干净的，可自行尝试
+        for (let i = newDemo.length - 1; i >= 0; i--) { // 一定要倒序，正序是删不干净的，可自行尝试
             demo.removeChild(newDemo[i]);
         }
     }
@@ -24,7 +24,7 @@ const run = () => {
 
     // 让JS代码生效
     // 创建新的script
-    var newScript = document.createElement('script');
+    let newScript = document.createElement('script');
     newScript.innerHTML = string.substr(0, n);
     demo.appendChild(newScript);
 

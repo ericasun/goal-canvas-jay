@@ -33,7 +33,7 @@
 }
 
 #codeDisplay{
-    overflow: hidden;
+    overflow-y: auto;
 }
 
 /*隐藏滚动条*/
