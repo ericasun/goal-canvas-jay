@@ -4,7 +4,7 @@
 }
 *::before, *::after{box-sizing: border-box;}
 
-/*屏幕宽度大于1024上下布局*/
+/*屏幕宽度小于1024上下布局*/
 @media screen and (max-width: 1024px) {
     main{
         display:flex;
@@ -12,17 +12,13 @@
     }
 }
 
-/*屏幕宽度小于1024左右布局*/
+/*屏幕宽度大于1024左右布局*/
 @media screen and (min-width: 1025px) {
     main{
         display:flex;
         align-items: flex-start;
         height: 100vh;
     }
-}
-
-#buttons{
- text-align: center;
 }
 
 .content{
@@ -43,6 +39,34 @@
     display: none;
 }
 
+.tools{
+    display:flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+#buttons{
+    display:flex;
+    flex-direction: column;
+}
+
 #buttons > button {
-    margin: 20px 5px;
+    margin: 5px;
+    width: 80px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+#btnFast{
+    background-color: #4cad38;
+}
+
+main{
+    position:fixed;
+    top: 0;
+    left:0;
+}
+
+#codeDisplay{
+    padding:5px;
 }

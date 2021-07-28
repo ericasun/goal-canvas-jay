@@ -86,7 +86,7 @@ ctx.fill();
 
 /**
  * 眉毛
- * */
+ */
 ctx.beginPath();
 ctx.moveTo(285,150);
 ctx.lineTo(449,255);
@@ -106,9 +106,6 @@ ctx.fill();
 
 /**
  * 开始画眼睛
- */
-
-/**
  * 左眼
  */
 ctx.strokeStyle = 'black';
@@ -307,8 +304,6 @@ ctx.fill();
 
 /**
  * 开始画衣服
- */
-/**
  * 左边衣服
  */
 ctx.beginPath();
@@ -369,7 +364,7 @@ ctx.fill();
 let codeNum = 1;
 let scriptNum = 1;
 
-let time = 100;
+let time = 50;
 
 const run = () => {
     codeNum += 10;
@@ -420,7 +415,7 @@ btnPlay.onclick = () => {
 
 btnSlow.onclick = () => {
     pause();
-    time = 300;
+    time = 150;
     id = play();
 }
 
@@ -435,4 +430,3 @@ btnNormal.onclick = () => {
     time = 100;
     id = setInterval(run, time)
 }
-
