@@ -68,3 +68,4 @@ btnNormal.onclick = () => {
     time = 100;
     id = setInterval(run, time)
 }
+

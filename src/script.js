@@ -34,9 +34,8 @@ ctx.lineCap = "round";
 ctx.beginPath();
 ctx.moveTo(185,220);
 ctx.bezierCurveTo(240,700,  620,720, 750,358);
-ctx.moveTo(185,220);
-ctx.bezierCurveTo(300,80,  600,80, 750,200);
-ctx.lineTo(750,358);
+ctx.lineTo(750, 200);
+ctx.bezierCurveTo(600,80,  300,80, 185,220);
 ctx.strokeStyle = '#c69253';
 ctx.stroke();
 ctx.fillStyle= '#c69253'
