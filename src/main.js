@@ -33,6 +33,9 @@ const run = () => {
 }
 
 const play = () => {
+    if( n > string.length + codeLength) {
+        n = 0;
+    }
     return setInterval(run, time);
 }
 

@@ -8,7 +8,7 @@ var canvas = document.getElementById("canvas");
 *  设置画布宽高
 */
 if( document.documentElement.clientWidth > 1024){
-    canvas.width = 752;client
+    canvas.width = 752;
     canvas.height = document.documentElement.clientHeight;
     codeDisplay.style.width = document.documentElement.clientWidth - canvas.width;
     codeDisplay.style.height = canvas.height - buttons.style.height + 'px';
