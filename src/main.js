@@ -72,3 +72,28 @@ btnNormal.onclick = () => {
     id = setInterval(run, time)
 }
 
+// 设置速度按钮样式
+speedBtns.addEventListener('click',(e)=>{
+    if(e.target.nodeName === 'BUTTON'){
+        for(let tempBtn of speedBtns.children){
+            tempBtn.classList.remove('selectedSpeedBtn')
+        }
+        const speedBtn = document.getElementById(e.target.id);
+        speedBtn.classList.add('selectedSpeedBtn')
+    }
+    for(let tempBtn of playOrPauseBtns.children){
+        tempBtn.classList.remove('selectedPlayOrPauseBtn')
+    }
+    btnPlay.classList.add('selectedPlayOrPauseBtn')
+})
+
+// 设置播放或暂时按钮样式
+playOrPauseBtns.addEventListener('click',(e)=>{
+    if(e.target.nodeName === 'BUTTON'){
+        for(let tempBtn of playOrPauseBtns.children){
+            tempBtn.classList.remove('selectedPlayOrPauseBtn')
+        }
+        const playOrPauseBtn = document.getElementById(e.target.id);
+        playOrPauseBtn.classList.add('selectedPlayOrPauseBtn')
+    }
+})

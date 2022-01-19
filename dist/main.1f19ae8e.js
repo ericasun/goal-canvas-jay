@@ -134,6 +134,12 @@ var _script = _interopRequireDefault(require("./script.js"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+function _createForOfIteratorHelper(o, allowArrayLike) { var it; if (typeof Symbol === "undefined" || o[Symbol.iterator] == null) { if (Array.isArray(o) || (it = _unsupportedIterableToArray(o)) || allowArrayLike && o && typeof o.length === "number") { if (it) o = it; var i = 0; var F = function F() {}; return { s: F, n: function n() { if (i >= o.length) return { done: true }; return { done: false, value: o[i++] }; }, e: function e(_e) { throw _e; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var normalCompletion = true, didErr = false, err; return { s: function s() { it = o[Symbol.iterator](); }, n: function n() { var step = it.next(); normalCompletion = step.done; return step; }, e: function e(_e2) { didErr = true; err = _e2; }, f: function f() { try { if (!normalCompletion && it.return != null) it.return(); } finally { if (didErr) throw err; } } }; }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 var n = 0;
 var time = 50;
 var codeLength = 10;
@@ -205,7 +211,67 @@ btnNormal.onclick = function () {
   pause();
   time = 100;
   id = setInterval(run, time);
-};
+}; // 设置速度按钮样式
+
+
+speedBtns.addEventListener('click', function (e) {
+  if (e.target.nodeName === 'BUTTON') {
+    var _iterator = _createForOfIteratorHelper(speedBtns.children),
+        _step;
+
+    try {
+      for (_iterator.s(); !(_step = _iterator.n()).done;) {
+        var tempBtn = _step.value;
+        tempBtn.classList.remove('selectedSpeedBtn');
+      }
+    } catch (err) {
+      _iterator.e(err);
+    } finally {
+      _iterator.f();
+    }
+
+    var speedBtn = document.getElementById(e.target.id);
+    speedBtn.classList.add('selectedSpeedBtn');
+  }
+
+  var _iterator2 = _createForOfIteratorHelper(playOrPauseBtns.children),
+      _step2;
+
+  try {
+    for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+      var _tempBtn = _step2.value;
+
+      _tempBtn.classList.remove('selectedPlayOrPauseBtn');
+    }
+  } catch (err) {
+    _iterator2.e(err);
+  } finally {
+    _iterator2.f();
+  }
+
+  btnPlay.classList.add('selectedPlayOrPauseBtn');
+}); // 设置播放或暂时按钮样式
+
+playOrPauseBtns.addEventListener('click', function (e) {
+  if (e.target.nodeName === 'BUTTON') {
+    var _iterator3 = _createForOfIteratorHelper(playOrPauseBtns.children),
+        _step3;
+
+    try {
+      for (_iterator3.s(); !(_step3 = _iterator3.n()).done;) {
+        var tempBtn = _step3.value;
+        tempBtn.classList.remove('selectedPlayOrPauseBtn');
+      }
+    } catch (err) {
+      _iterator3.e(err);
+    } finally {
+      _iterator3.f();
+    }
+
+    var playOrPauseBtn = document.getElementById(e.target.id);
+    playOrPauseBtn.classList.add('selectedPlayOrPauseBtn');
+  }
+});
 },{"./script.js":"script.js"}],"../../../../.config/yarn/global/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -234,7 +300,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54375" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60963" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

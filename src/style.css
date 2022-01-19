@@ -46,21 +46,26 @@
     align-items: flex-start;
     justify-content: space-between;
 }
-#buttons{
+#buttons #playOrPauseBtns,
+#buttons #speedBtns
+{
     display:flex;
     flex-direction: column;
 }
-#buttons > button {
+#buttons button {
     margin: 5px;
     width: 80px;
     height: 40px;
     border-radius: 10px;
 }
-#btnFast{
-    background-color: #4cad38;
-}
 main{
     position:fixed;
     top: 0;
     left:0;
+}
+.selectedSpeedBtn{
+    background-color: #4cad38;
+}
+.selectedPlayOrPauseBtn{
+    background-color: red;
 }
