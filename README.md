@@ -8,3 +8,8 @@ parcel src/index.html
 ```
 git rm -r --cached .
 ```
+
+## github浏览地址
+```
+https://ericasun.github.io/goal-canvas-jay/src/index.html
+```
